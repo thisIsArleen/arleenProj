@@ -1,0 +1,211 @@
+﻿/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Case Problem 2
+   
+   Civil War History Style Sheet
+   Author: ARLEEN BAUTISTA
+   Date:   Jun 8, 2022
+   
+   Filename: cw_styles.css
+
+
+/* 
+/*Step 5. To define the character encoding*/
+
+@charset "utf-8";
+
+/* Step 6. Import the contents of the cw_layout.css*/
+@import url("cw_layout.css");
+
+/* Structural Styles */
+
+/* Step 7. Create a style rule to set the background color of the browser window.*/
+html {
+   background-color: rgb(151, 151, 151);
+}
+
+/* Body Header Styles */
+/* Step 8. Create a style rule to set the background color of the page body and set the body text.*/
+
+body {
+   background-color: rgb(180, 180, 223);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 9. Display all h1 and h2 headings with normal weight */
+h1,
+h2 {
+   font-weight: normal;
+}
+
+/* Step 12. Format the body header */
+
+body>header {
+   background-color: rgb(97, 97, 211);
+}
+
+/* Step 13. Create a style rule for the h1 heading that is a direct child of the body header and set the margin space. */
+body>header>h1 {
+   font-size: 4vw;
+   color: rgba(255, 255, 255, 0.8);
+   font-family: limelight, cursive;
+   margin: 0px;
+   margin-left: 25px;
+
+
+}
+
+/* Step 14. Create a style rule for h1 heading */
+
+body>header>h1>span {
+   color: rgba(255, 255, 255, 0.4);
+}
+
+/* Navigation Styles */
+/* Step 10. Remove the underling text for all hypertext link nested within a navigation list */
+a {
+   text-decoration: none;
+}
+
+/* Step 15. Format the navigation list that has the ID mainLinks.*/
+
+#mainLinks {
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+/* Step 16. Displays the hypertext links For previously visited and unvisited links within the mainLinks navigation list Ref. book page 153*/
+
+nav>ul>li>a:link,
+nav>ul>li>a:visited {
+   color: white;
+   text-decoration: none;
+}
+
+/* Step 17. Create style rule for hovered or active links within the mainLinks navigation list */
+nav>ul>li>a:hover,
+nav>ul>li>a:active {
+   opacity: 0.8;
+   color: rgba(51, 51, 51, 0.5);
+   text-decoration: underline;
+}
+
+
+/* Outline Styles */
+
+/* Step 18. Create style rule for Outline Styles section. 
+   Step 19. Horizontally center the h1 headings within the outline navigation list.*/
+
+#outline {
+   color: rgb(51, 51, 51);
+   font-size: 0.8em;
+}
+
+#outline>h1 {
+   text-align: center;
+}
+
+/* Step 20.  Create style rule for the first level ol elements that are a direct child of the outline navigation list,
+and display the list marker as an upper-case Roman numeral.*/
+
+nav#outline ol {
+   line-height: 2em;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 5px;
+   margin-right: 5px;
+   list-style: upper-roman;
+}
+
+/*Step 21. Display the second level of ol elements with an uppercase letter.*/
+
+nav#outline ol ol {
+   list-style: upper-alpha;
+}
+
+/* Step 22. Add color for previously visited and unvisited links */
+nav#outline ol li a:visited,
+nav#outline ol li a:link {
+   color: rgb(101, 101, 101);
+}
+
+/* Step 23. Add color for hovered and active links in the outline navigation list with the text underlined.*/
+nav#outline ol li a:hover,
+nav#outline ol li:active {
+   color: rgb(97, 97, 211);
+   text-decoration: underline;
+}
+
+/* Section Styles */
+
+/* Step 24. Add background color for the description of the course. */
+section {
+   background-color: rgb(220, 220, 220);
+}
+
+/* Step 25. Format the heading of the Section style */
+section h1 {
+   font-size: 2.2em;
+   padding-left: 10px;
+}
+
+/* Article Styles */
+/* Step 26. Create a style rule for h2 headings of the Article Styles section.*/
+article h2 {
+   font-size: 1.4em;
+}
+
+/* Step 27. Display the first letter of the first paragraph */
+/* test: article>h2>p:first-of-type, 
+article h2 p::first-letter*/
+
+article>h2:first-of-type+p::first-letter {
+   font-size: 2em;
+   vertical-align: baseline;
+}
+
+/* Aside Styles */
+
+/*Step 28. Create style rule for Aside Styles */
+
+aside {
+   font-size: 0.9em;
+}
+
+aside h1 {
+   font-size: 1.4em;
+   text-align: center;
+}
+
+/*footer*/
+/* Step 11. Create a style rule for the footer element */
+footer {
+   color: white;
+   background-color: rgb(101, 101, 101);
+   font-size: 0.8em;
+   text-align: center;
+
+   padding-top: 1px;
+   padding-bottom: 1px;
+
+
+   /* ==============================
+Mobile Styles: 0px to 480px
+===============================
+*/
+   @media only screen and (max-width: 480px) {}
+
+   /* ================================
+Tablet Styles: 481px and greater
+================================
+*/
+   @media only screen and (min-width: 481px) {}
+
+   /* =================================
+Desktop Styles: 769px and greater
+=================================
+*/
+   @media only screen and (min-width: 769px) {}
+
+}
